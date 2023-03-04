@@ -4,6 +4,16 @@ from IPython.display import display
 
 openai.api_key = "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"
 
+input("which open ai source woud you like to use: 1-Ada, 2-Babbage, 3-Curie, 4-Davinci")
+if input =="1":
+    enginet = "ada"
+if input =="2":
+    enginet = "babbage"
+if input =="3":
+    enginet = "curie"
+if input =="4":
+    enginet = "davinci"
+
 board = ch.Board()
 display(board)
 n=0
@@ -17,7 +27,7 @@ start_move=move
 
 
 complete = openai.Completion.create(
-    engine = "davinci",
+    engine = enginet,
     n=5,
     max_tokens=6,
     prompt = "Play chess 1."+start_move,
