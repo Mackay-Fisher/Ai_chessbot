@@ -2,8 +2,7 @@ import chess as ch
 import openai
 from IPython.display import display
 
-openai.api_key = "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"
-
+openai.api_key = "Your_api_key"
 input("which open ai source woud you like to use: 1-Ada, 2-Babbage, 3-Curie, 4-Davinci")
 if input =="1":
     enginet = "ada"
